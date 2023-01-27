@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app, support_credentials=True)
 
 
-def load_models():
+def load_models_translasi():
     # build model and tokenizera
     model_name_dict = {
         'nllb-distilled-600M': 'model',
@@ -79,5 +79,5 @@ def getlanguages():
 
 if __name__ == '__main__':
     global model_dict
-    model_dict = load_models()
+    model_dict = load_models_translasi()
     app.run()
